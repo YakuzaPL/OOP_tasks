@@ -1,3 +1,4 @@
+
 class Warehouse:
 
     def __init__(self, product_list):
@@ -27,13 +28,14 @@ class Warehouse:
 
 warehouse = Warehouse(['mleko', 'woda', 'jajka'])
 
-while True:
+user_choice = 0
+while user_choice != 4:
 
         print("Wprowadź 1 aby wyśiwetlić stan magazynu.")
         print("Wprowadź 2 aby dodać produkt.")
         print("Wprowadź 3 aby usunąc produkt.")
         print("Wprowadź 4 aby zakończyć")
-        user_choice = ""
+
         try:
             user_choice = int(input(">>> "))
         except ValueError:
