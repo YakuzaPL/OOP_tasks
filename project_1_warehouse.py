@@ -46,5 +46,3 @@ while user_choice != 4:
             warehouse.add_product()
         elif user_choice == 3:
             warehouse.remove_product()
-        elif user_choice == 4:
-            break
