@@ -1,6 +1,3 @@
-import sys
-
-
 class Warehouse:
 
     def __init__(self, product_list):
@@ -31,16 +28,21 @@ class Warehouse:
 warehouse = Warehouse(['mleko', 'woda', 'jajka'])
 
 while True:
-    print("Wprowadź 1 aby wyśiwetlić stan magazynu.")
-    print("Wprowadź 2 aby dodać produkt.")
-    print("Wprowadź 3 aby usunąc produkt.")
-    print("Wprowadź 4 aby zakończyć")
-    user_choice = int(input(">>> "))
-    if user_choice == 1:
-        warehouse.display_available_products()
-    elif user_choice == 2:
-        warehouse.add_product()
-    elif user_choice == 3:
-        warehouse.remove_product()
-    elif user_choice == 4:
-        sys.exit()
+
+        print("Wprowadź 1 aby wyśiwetlić stan magazynu.")
+        print("Wprowadź 2 aby dodać produkt.")
+        print("Wprowadź 3 aby usunąc produkt.")
+        print("Wprowadź 4 aby zakończyć")
+        user_choice = ""
+        try:
+            user_choice = int(input(">>> "))
+        except ValueError:
+            print("Podana wartość jest nieprawidłowa.")
+        if user_choice == 1:
+            warehouse.display_available_products()
+        elif user_choice == 2:
+            warehouse.add_product()
+        elif user_choice == 3:
+            warehouse.remove_product()
+        elif user_choice == 4:
+            break
